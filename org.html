@@ -1,0 +1,149 @@
+<!--org page - list all orginizations in database and displays basci info with buttons to message-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Organizations Database</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="Table_Responsive_v1/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Table_Responsive_v1/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Table_Responsive_v1/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Table_Responsive_v1/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Table_Responsive_v1/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Table_Responsive_v1/vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Table_Responsive_v1/css/util.css">
+	<link rel="stylesheet" type="text/css" href="Table_Responsive_v1/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	<div class="topnav">
+	  <a href="home.html">Home</a>
+	  <a href="mailbox.html">Go to Inbox</a>
+	  <a href="message.html">Send a Message</a>
+	  <a href="index.html">Logout</a>
+	</div>
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="container">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<h1><b>Organization Database</b></h1>
+						<p>Type in the name of the organization or type of resource:</p>
+						<br>  
+						<input class="form-control" id="myInput" type="text" placeholder="Search..">
+						<br>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">Organization</th>
+								<th class="column2">Distance</th>
+								<th class="column3">Resource Type</th>
+								<th class="column4">Availability</th>
+								<th class="column5">Quantity</th>
+								<th class="column6">Message</th>
+							</tr>
+						</thead>
+						<tbody id="myTable">
+								<tr>
+									<td class="column1">Food Bank</td>
+									<td class="column2">0.0 Miles</td>
+									<td class="column3">Food</td>
+									<td class="column4">Yes</td>
+									<td class="column5">1</td>
+									<td class="column6">
+										<li class="active">
+		            						<a href="message.html" style = color:midnightblue><b><img src="Table_Responsive_v1/images/icons/envelope.png" height=28 width=28></b></a>
+		            					</li>
+	            					</td>
+									
+								</tr>
+								<tr>
+									<td class="column1">Yolo Homeless Shelter</td>
+									<td class="column2">4.0 Miles</td>
+									<td class="column3">Housing</td>
+									<td class="column4">10</td>
+									<td class="column5">1</td>
+									<td class="column6">
+										<li class="active">
+		            						<a href="message.html" style = color:midnightblue><b><img src="Table_Responsive_v1/images/icons/envelope.png" height=28 width=28></b></a>
+		            					</li>
+	            					</td>
+								</tr>
+								<tr>
+									<td class="column1">2017-09-26 05:57</td>
+									<td class="column2">200396</td>
+									<td class="column3">Game Console Controller</td>
+									<td class="column4">$22.00</td>
+									<td class="column5">2</td>
+									<td class="column6">
+										<li class="active">
+		            						<a href="message.html" style = color:midnightblue><b><img src="Table_Responsive_v1/images/icons/envelope.png" height=28 width=28></b></a>
+		            					</li>
+	            					</td>
+								</tr>
+								<tr>
+									<td class="column1">2017-09-25 23:06</td>
+									<td class="column2">200392</td>
+									<td class="column3">USB 3.0 Cable</td>
+									<td class="column4">$10.00</td>
+									<td class="column5">3</td>
+									<td class="column6">
+										<li class="active">
+		            						<a href="message.html" style = color:midnightblue><b><img src="Table_Responsive_v1/images/icons/envelope.png" height=28 width=28></b></a>
+		            					</li>
+	            					</td>
+								</tr>
+								<tr>
+									<td class="column1">2017-09-24 05:57</td>
+									<td class="column2">200391</td>
+									<td class="column3">Smartwatch 4.0 LTE Wifi</td>
+									<td class="column4">$199.00</td>
+									<td class="column5">6</td>
+									<td class="column6">
+										<li class="active">
+		            						<a href="message.html" style = color:midnightblue><b><img src="Table_Responsive_v1/images/icons/envelope.png" height=28 width=28></b></a>
+		            					</li>
+	            					</td>
+								</tr>
+								
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="Table_Responsive_v1/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Table_Responsive_v1/vendor/bootstrap/js/popper.js"></script>
+	<script src="Table_Responsive_v1/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Table_Responsive_v1/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Table_Responsive_v1/js/main.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</body>
+</html>

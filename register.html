@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register a New Orgination</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+  <div class="limiter"> 
+    <div class="container-login100">
+      <!--style="background-image: url('images/bg-01.jpg');"-->
+      <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54" style=width:1000px>
+        <form class="login100-form validate-form">
+          <span class="login100-form-title p-b-49">
+            Register a New Organization
+          </span>
+
+          <div class="wrap-input100 validate-input m-b-23" data-validate = "Organization Name is Required">
+            <span class="label-input100">Organization Name</span>
+            <input class="input100" type="text" id="name" placeholder="Organization Name">
+            <span class="focus-input100" data-symbol="&#xf206;"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input">
+            <span class="label-input100">Type of Organization</span>
+            <input class="input100" type="text" id="type" placeholder="type">
+            <span class="focus-input100" data-symbol="&#xf190;"></span>
+          </div>
+          <div class="wrap-input100 validate-input">
+            <span class="label-input100">President/Founder of Organization</span>
+            <input class="input100" type="text" id="president" placeholder = "Organization Leader">
+            <span class="focus-input100" data-symbol="&#xf190;"></span>
+          </div>
+          <br>
+            <div class="wrap-input100 validate-input">
+            <span class="label-input100">Business Hours</span>
+            <input class="input100" type="text" id="hours" placeholder="Business Hours">
+            <span class="focus-input100" data-symbol="&#xf190;"></span>
+          </div>
+          <div class="wrap-input100 validate-input">
+            <span class="label-input100">Location</span>
+            <input class="input100" type="text" id="location" placeholder="Location">
+            <span class="focus-input100" data-symbol="&#xf190;"></span>
+          </div>
+            <div class="wrap-input100 validate-input">
+            <span class="label-input100">Phone Number</span>
+            <input class="input100" type="text" id="phone" placeholder="Phone Number">
+            <span class="focus-input100" data-symbol="&#xf190;"></span>
+          </div>
+          <div>
+            <div class="wrap-input100 validate-input">
+            <span class="label-input100">Email Address</span>
+            <input class="input100" type="text" id="email" placeholder="Email Address">
+            <span class="focus-input100" data-symbol="&#xf190;"></span>
+          </div>
+          <br>
+          <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+              <div class="login100-form-bgbtn"></div>
+              <input class="login100-form-btn" type = "button" onclick="submitInfo()" value= "Submit">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <button onclick = "submitInfo()">
+    Register
+  </button>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-auth.js"></script>
+
+       <script>
+         // Your web app's Firebase configuration
+         var config = {
+           apiKey: "AIzaSyALrSQrhC1VWn550M_aHq496etx0BxAru8",
+           authDomain: "database-61732.firebaseapp.com",
+           databaseURL: "https://database-61732.firebaseio.com",
+           projectId: "database-61732",
+           storageBucket: "",
+           messagingSenderId: "211407557412"
+         };
+         // Initialize Firebase
+         firebase.initializeApp(config);
+       </script>
+
+  <script src="js/register.js"></script>
+
+  <body>
+  <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Add the entire Firebase JavaScript SDK -->
+  <script src="/__/firebase/7.7.0/firebase.js"></script>
+</body>
+
+
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Inbox</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="sidebar-02/css/style.css">
+  </head>
+  <body>
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="custom-menu">
+	          <i class="fa fa-bars"></i>
+	          <span class="sr-only">Toggle Menu</span>
+	        </button>
+        </div>
+        <div class="p-4 pt-5">
+          <h1><a href="index.html" class="logo" style = color:rgb(50,50,50)>Menu</a></h1>
+    <ul class="list-unstyled components mb-5">
+      <li class="active">
+              <a href="home.html" style = color:rgb(50,50,50)><b>Home</b></a>
+            </li>
+            <li>
+                <a href="org.html" style = color:rgb(50,50,50)><b> Search For Organizations</b></a>
+            </li>
+            <li>
+                <a href="beneficiaries.html" style = color:rgb(50,50,50)><b> Add a Beneficiary</b></a>
+            </li>
+            <li>              
+              <a href="message.html" style = color:rgb(50,50,50)><b>Send a Message</b></a>
+            </li>
+            <li>              
+              <a href="index.html" style = color:rgb(50,50,50)><b>Logout</b></a>
+            </li>
+    </ul>
+	   </div>
+    	</nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+        <div class="inbox-body">
+            <div class="mail-option">
+                <div class="chk-all">
+                    <input type="checkbox" class="mail-checkbox mail-group-checkbox">
+                    <div class="btn-group">
+                        <a data-toggle="dropdown" href="#" class="btn mini all" aria-expanded="false">
+                            All
+                            <i class="fa fa-angle-down "></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"> None</a></li>
+                            <li><a href="#"> Read</a></li>
+                            <li><a href="#"> Unread</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <a data-original-title="Refresh" data-placement="top" data-toggle="dropdown" href="#" class="btn mini tooltips">
+                        <i class=" fa fa-refresh"></i>
+                    </a>
+                </div>
+                <div class="btn-group hidden-phone">
+                    <a data-toggle="dropdown" href="#" class="btn mini blue" aria-expanded="false">
+                        More
+                        <i class="fa fa-angle-down "></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
+                        <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a data-toggle="dropdown" href="#" class="btn mini blue">
+                        Move to
+                        <i class="fa fa-angle-down "></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
+                        <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+                    </ul>
+                </div>
+
+            
+                <a href="#" align = "right"><b>1-50 of 234</right></b></a>
+
+                    <!-- <a align = "right">1-50 of 234</a> -->
+               
+            </div>
+		<table class="table table-inbox table-hover">
+            <tbody>
+                    <tr class="unread">
+                            <td class="view-message  dont-show">                        </td>
+                            <td class="view-message  dont-show">                        </td>
+                            <td class="view-message  dont-show"><b>Organization</b></td>
+                            <td class="view-message "><b>Subject</b></td>
+                            <td class="view-message  dont-show">                        </td>
+                            <td class="view-message  text-right"><b>Date</b></td>
+                    </tr>
+              <tr class="unread">
+                  <td class="inbox-small-cells">
+                      <input type="checkbox" class="mail-checkbox">
+                  </td>
+                  <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                  <td class="view-message  dont-show" onclick="location.href = 'sample_email.html'">Yolo Substance Relief</td>
+                  <td class=view-message >Referral: Health Immunizations</td>
+                  <td class="view-message  inbox-small-cells"><i class="fa fa-paperclip"></i></td>
+                  <td class="view-message  text-right">Jan 01</td>
+              </tr>
+              <tr class="unread">
+                  <td class="inbox-small-cells">
+                      <input type="checkbox" class="mail-checkbox">
+                  </td>
+                  <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                  <td class="view-message dont-show">Love-A-Child Missions Homeless Recovery Shelter </td>
+                  <td class="view-message">Referral: YY</td>
+                  <td class="view-message inbox-small-cells"></td>
+                  <td class="view-message text-right">March 15</td>
+              </tr>
+              <tr class="">
+                  <td class="inbox-small-cells">
+                      <input type="checkbox" class="mail-checkbox">
+                  </td>
+                  <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                  <td class="view-message dont-show">Bay Area Legal Aid</td>
+                  <td class="view-message">Referral: ZZ</td>
+                  <td class="view-message inbox-small-cells"></td>
+                  <td class="view-message text-right">March 15</td>
+              </tr>
+              <tr class="">
+                  <td class="inbox-small-cells">
+                      <input type="checkbox" class="mail-checkbox">
+                  </td>
+                  <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                  <td class="view-message dont-show">Yolo Food Bank</td>
+                  <td class="view-message">Referral: JJ</td>
+                  <td class="view-message inbox-small-cells"></td>
+                  <td class="view-message text-right">April 01</td>
+              </tr>
+              <tr class="">
+                  <td class="inbox-small-cells">
+                      <input type="checkbox" class="mail-checkbox">
+                  </td>
+                  <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                  <td class="view-message dont-show">Larkin Street Youth Services<span class="label label-danger pull-right"></span></td>
+                  <td class="view-message">Referral: EE </td>
+                  <td class="view-message inbox-small-cells"></td>
+                  <td class="view-message text-right">May 23</td>
+              </tr>
+              <tr class="">
+                  <td class="inbox-small-cells">
+                      <input type="checkbox" class="mail-checkbox">
+                  </td>
+                  <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                  <td class="view-message dont-show">Resource Development Associates </td>
+                  <td class="view-message">Referral:TT</td>
+                  <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
+                  <td class="view-message text-right">March 14</td>
+              </tr>
+              <tr class="">
+                  <td class="inbox-small-cells">
+                      <input type="checkbox" class="mail-checkbox">
+                  </td>
+                  <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                  <td class="view-message dont-show">Contra Costa ARC</td>
+                  <td class="view-message">Referral: GG</td>
+                  <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
+                  <td class="view-message text-right">Feb 19</td>
+              </tr>
+                  <td class="inbox-small-cells">
+                      <input type="checkbox" class="mail-checkbox">
+                  </td>
+                  <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                  <td class="view-message dont-show">Bay Area Children's Association<span class="label label-success pull-right"></span></td>
+                  <td class="view-message view-message">Referral: LL</td>
+                  <td class="view-message inbox-small-cells"></td>
+                  <td class="view-message text-right">March 04</td>
+              </tr>
+              <tr class="">
+                  <td class="inbox-small-cells">
+                      <input type="checkbox" class="mail-checkbox">
+                  </td>
+                  <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                  <td class="view-message dont-show">Youth Food Project</td>
+                  <td class="view-message view-message">Referral: QQ</td>
+                  <td class="view-message inbox-small-cells"></td>
+                  <td class="view-message text-right">June 13</td>
+              </tr>
+              <tr class="">
+                  <td class="inbox-small-cells">
+                      <input type="checkbox" class="mail-checkbox">
+                  </td>
+                  <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                  <td class="view-message dont-show">Alameda County Community Food Bank <span class="label label-info pull-right"></span></td>
+                  <td class="view-message view-message">Referral: WW</td>
+                  <td class="view-message inbox-small-cells"></td>
+                  <td class="view-message text-right">March 24</td>
+                </tr>
+          </tbody>
+      </div>
+		</div>
+
+    <script src="sidebar-02/js/jquery.min.js"></script>
+    <script src="sidebar-02/js/popper.js"></script>
+    <script src="sidebar-02/js/bootstrap.min.js"></script>
+    <script src="sidebar-02/js/main.js"></script>
+  </body>
+</html>

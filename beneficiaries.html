@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Refer a Person in Need</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+  <div class="topnav">
+    <a href="home.html">Home</a>
+    <a href="mailbox.html">Go to Inbox</a>
+    <a href="message.html">Send a Message</a>
+    <a href="index.html">Logout</a>
+  </div>
+
+<div class="limiter"> 
+    <div class="container-login100">
+      <!--style="background-image: url('images/bg-01.jpg');"-->
+      <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54" style=width:1000px>
+        <form class="login100-form validate-form">
+          <span class="login100-form-title p-b-49">
+            Refer a Person in Need
+          </span>
+
+          <div class="wrap-input100 validate-input m-b-23" data-validate = "Beneficiary Name is Required">
+            <span class="label-input100">Beneficiary Name</span>
+            <input class="input100" type="text" id="name" placeholder="Beneficiary Name">
+            <span class="focus-input100" data-symbol="&#xf206;"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input">
+            <span class="label-input100">Age</span>
+            <input class="input100" type="text" id="age" placeholder="Age">
+            <span class="focus-input100" data-symbol="&#xf190;"></span>
+          </div>
+          <div class="wrap-input100 validate-input">
+            <span class="label-input100">Gender</span>
+            <input class="input100" type="radio" id="gender" value = "male"> Male </t>
+            <input class="input100" type="radio" id="gender" value = "female"> Female </t>
+            <input class="input100" type="radio" id="gender" value = "other"> Other, Prefer Not Say <br>
+            <span class="focus-input100" data-symbol="&#xf190;"></span>
+          </div>
+          <br>
+            <div class="wrap-input100 validate-input">
+            <span class="label-input100">Location</span>
+            <input class="input100" type="text" id="location" placeholder="Location">
+            <span class="focus-input100" data-symbol="&#xf190;"></span>
+          </div>
+          <div class="wrap-input100 validate-input">
+            <span class="label-input100">Contact</span>
+            <input class="input100" type="text" id="contact" placeholder="Contact">
+            <span class="focus-input100" data-symbol="&#xf190;"></span>
+          </div>
+            <div class="wrap-input100 validate-input">
+            <span class="label-input100">Notes</span>
+            <input class="input100" type="text" id="notes" placeholder="Notes">
+            <span class="focus-input100" data-symbol="&#xf190;"></span>
+          </div>
+          <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+              <div class="login100-form-bgbtn"></div>
+              <input class="login100-form-btn" type = "button" onclick="submitInfo()" value= "Submit">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Add the entire Firebase JavaScript SDK -->
+  <script src="/__/firebase/7.7.0/firebase.js"></script>
+  <!--===============================================================================================-->  
+  <script src="Table_Responsive_v1/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+  <script src="Table_Responsive_v1/vendor/bootstrap/js/popper.js"></script>
+  <script src="Table_Responsive_v1/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+  <script src="Table_Responsive_v1/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+  <script src="Table_Responsive_v1/js/main.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-auth.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var config = {
+      apiKey: "AIzaSyBdYlo7TuQuJVbif1ilRgdBEdapls2YjEE",
+      authDomain: "beneficiaries-database.firebaseapp.com",
+      databaseURL: "https://beneficiaries-database.firebaseio.com",
+      projectId: "beneficiaries-database",
+      storageBucket: "",
+      messagingSenderId: "584288826337"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(config);
+  </script>
+
+  <script src="js/beneficiaries.js"></script>
+
+
+</body>
+
+</html>
